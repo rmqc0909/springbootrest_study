@@ -2,8 +2,6 @@ package com.github.myproject.rest;
 
 import com.github.myproject.dao.DemoDao;
 import com.github.myproject.domain.Demo;
-import com.github.myproject.domain.Message;
-import com.github.myproject.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -14,26 +12,21 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
+/**
+ * Created by xiedan on 2016/12/17.
+ */
 @Path("/rest")
 @Controller
-public class RestResource {
+public class RestDemo {
 
     @Autowired
-    private MessageService messageService;
-
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    @Path("/hello")
-    public String hello() {
-        return "Hello World";
-    }
+    private DemoDao demoDao;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/messages")
-    public List<Message> message() {
-        return messageService.getMessages();
+    @Path("/infos/{age}")
+    public List<Demo> show(@PathParam("age") Integer age) {
+        System.out.println("test");
+        return demoDao.findByAge(age);
     }
-
-
 }
