@@ -23,7 +23,7 @@ public class RestDemo {
     private DemoDao demoDao;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Path("/infos/{age}")
     public List<Demo> show(@PathParam("age") Integer age) {
         System.out.println("test");
