@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.rmqc</groupId>
   <artifactId>springboot</artifactId>
-  <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>springboot Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
   <properties>
+    <java.version>1.8</java.version>
     <jersey.version>2.22.1</jersey.version>
     <jdbc.driver.version>5.1.27</jdbc.driver.version>
     <tomcat-jdbc.version>7.0.35</tomcat-jdbc.version>
