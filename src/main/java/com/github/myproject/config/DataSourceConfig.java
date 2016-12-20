@@ -14,7 +14,7 @@ public class DataSourceConfig {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/rest_demo?allowMultiQueries=true");
         dataSource.setUsername("root");
-        dataSource.setPassword("rimuqingchen0909");
+        dataSource.setPassword("");
         return dataSource;
     }
 }
