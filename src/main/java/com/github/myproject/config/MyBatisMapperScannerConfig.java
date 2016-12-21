@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by xiedan on 2016/12/18.
+ * 注意@AutoConfigureAfter(MyBatisConfig.class)，必须有这个配置，否则会有异常。原因就是这个类执行的比较早，由于sqlSessionFactory还不存在，后续执行出错。
  */
 @Configuration
 @AutoConfigureAfter(MyBatisConfig.class)

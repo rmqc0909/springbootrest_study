@@ -11,12 +11,15 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 /**
  * Created by xiedan on 2016/12/18.
+ * 支持注解事务，返回PlatformTransactionManager Bean
  */
 @Configuration
+@EnableTransactionManagement
 public class MyBatisConfig implements TransactionManagementConfigurer {
 
     @Autowired
